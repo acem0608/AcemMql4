@@ -12,12 +12,15 @@ CAcemSyncChartPos syncChartPos;
 //| Custom indicator initialization function                         |
 //+------------------------------------------------------------------+
 int OnInit()
-  {
+{
 //--- indicator buffers mapping
-   syncChartPos.init();
+    ChartSetInteger(ChartID(), CHART_EVENT_MOUSE_MOVE, true);
+    ChartSetInteger(ChartID(), CHART_EVENT_OBJECT_CREATE, true);
+    ChartSetInteger(ChartID(), CHART_EVENT_OBJECT_DELETE, true);
+    syncChartPos.init();
 //---
    return(INIT_SUCCEEDED);
-  }
+}
  
 void OnDeinit(const int reason)
 {

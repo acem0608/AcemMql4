@@ -10,13 +10,14 @@
 
 #define INDICATOR_SHORT_NAME "AcemSyncObject"
 
-CAcemSyncObject syncObj;
+CAcemSyncObject syncObj(INDICATOR_SHORT_NAME);
 
 //+------------------------------------------------------------------+
 //| Custom indicator initialization function                         |
 //+------------------------------------------------------------------+
 int OnInit()
 {
+    IndicatorSetString(INDICATOR_SHORTNAME, INDICATOR_SHORT_NAME);
     long chartId = ChartID();
     if (isSameIndicator(chartId, INDICATOR_SHORT_NAME))
     {

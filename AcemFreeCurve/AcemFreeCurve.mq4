@@ -31,6 +31,8 @@ int OnInit()
     ChartSetInteger(chartId, CHART_EVENT_OBJECT_DELETE, true);
     //---
 
+    drawFreeCureve.init();
+
     return (INIT_SUCCEEDED);
 }
 //+------------------------------------------------------------------+

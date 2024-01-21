@@ -35,6 +35,12 @@ int OnInit()
 
     return (INIT_SUCCEEDED);
 }
+
+void OnDeinit(const int reason)
+{
+    drawFreeCureve.deinit(reason);
+}
+
 //+------------------------------------------------------------------+
 //| Custom indicator iteration function                              |
 //+------------------------------------------------------------------+
